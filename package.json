@@ -1,0 +1,46 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "--main": "snowpack.config.js",
+  "scripts": {
+    "test": "test",
+    "start": "cross-env NODE_ENV=development TAILWIND_MODE=watch snowpack dev",
+    "watch": "cross-env NODE_ENV=production TAILWIND_MODE=watch snowpack build --watch",
+    "build": "cross-env NODE_ENV=production snowpack build",
+    "wp-build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "---browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%"
+  ],
+  "dependencies": {
+    "d3": "^6.6.1",
+    "d3-require": "^1.2.4",
+    "d3-selection": "^2.0.0",
+    "d3-tile": "^1.0.0",
+    "leaflet": "^1.7.1",
+    "tabulator-tables": "^4.9.3",
+    "topojson-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/runtime": "^7.13.10",
+    "@local/snowpack-css-refresh-plugin": "file:./dev/snowpack-css-refresh-plugin",
+    "@snowpack/plugin-postcss": "^1.2.1",
+    "@snowpack/plugin-run-script": "^2.3.0",
+    "@snowpack/plugin-webpack": "^2.3.1",
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "postcss": "^8.2.13",
+    "postcss-cli": "^8.3.1",
+    "snowpack": "^3.1.2",
+    "tailwindcss": "^2.0.4",
+    "webpack-cli": "^4.5.0"
+  }
+}

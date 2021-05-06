@@ -1,0 +1,56 @@
+#workspace {
+  /* border: solid 1px red; */
+  display: grid;
+  grid-template-columns: auto;
+  /* grid-template-rows: 1fr; */
+  /* overflow: auto; */
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+#scene {
+  border: solid 1px grey;
+  width: 750px;
+  height: 500px;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  /* pointer-events: all; */
+}
+
+#map.hidden {
+  opacity: 0;
+  z-index: 0;
+  /* display: none; */
+  /* pointer-events: none; */
+}
+
+.node.hidden {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+#graph-editor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+#graph-editor svg {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* #graph-editor path {
+    pointer-events: auto;
+  } */

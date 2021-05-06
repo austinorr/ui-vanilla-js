@@ -1,0 +1,83 @@
+.graph-container {
+  /* border: solid 3px green; */
+  display: block;
+  width: 90%;
+  height: 400px;
+  min-height: 50vh;
+  max-height: 90vh;
+  /* margin: 15px; */
+  /* display: inline-block; */
+  /* position: relative;
+  width: 100%; */
+  /* height: 100%; */
+  /* padding-bottom: 100%; /* aspect ratio */
+  /* vertical-align: top; */
+  /* overflow: hidden; */
+}
+
+.network {
+  /* border: solid 3px blue; */
+  margin: 15px;
+}
+
+.network_svg * {
+  /* border: solid 1px grey; */
+  /* background-color: #fff; */
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  /* display: inline-block; */
+  /* position: absolute; */
+  /* top: 0
+  left: 0; */
+}
+
+.network_svg svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+.network_svg path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4px;
+  cursor: default;
+}
+
+.network_svg svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+.network_svg path.link.selected {
+  stroke-dasharray: 10, 2;
+}
+
+.network_svg path.link.dragline {
+  pointer-events: none;
+}
+
+.network_svg path.link.hidden {
+  stroke-width: 0;
+}
+
+.network_svg circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+.network_svg circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 2.5px;
+}
+
+.network_svg text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+.network_svg text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
